@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onyirioha Alvin - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        color: #333;
+        background: #f9f9f9;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        background: #1a1a1a;
+        color: #fff;
+      }
+
+      header h1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2rem;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ff6347;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 4rem auto;
+        padding: 2rem;
+      }
+
+      section {
+        padding: 3rem 0;
+        border-bottom: 1px solid #ddd;
+      }
+
+      section:last-child {
+        border: none;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        line-height: 1.6;
+        font-size: 1.125rem;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      
+      }
+
+      .project {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s;
+        padding-right: 10px;
+      }
+
+      
+
+      .project:hover {
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.15);
+        padding-left: 10px;
+        color: white; 
+        padding-right: 10px;
+        background-color: black;
+        transition: 0.3s;
+      }
+      
+
+      .project h3 {
+        font-size: 1.75rem;
+        color: #1a1a1a;
+        transition: color 0.3s;
+      }
+
+      .project:hover h3,
+      .project:hover p {
+        color: white;
+      }
+
+      
+
+      .project p {
+        margin-top: 0.5rem;
+      }
+
+      form {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 2rem auto;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+
+      button {
+        background: #1a1a1a;
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background: #ff6347;
+      }
+
+      footer {
+        background: #1a1a1a;
+        color: #fff;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 3rem;
+      }
+
+      footer p {
+        font-size: 1rem;
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Onyirioha Alvin</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hello! My Name is Onyirioha Alvin. I'm a passionate web developer with experience in creating dynamic and responsive websites.
+          I love coding and am constantly learning new technologies to enhance my skills.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+          <div class="project">
+            <h3>YouTube Clone</h3>
+            <p> I recreated the YouTube website from scratch using HTML, CSS, and JavaScript.</p>
+          </div>
+          <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>A modern, responsive portfolio website showcasing my development skills.</p>
+          </div>
+          <div class="project">
+            <h3>Custom App</h3>
+            <p>A full-stack application built using the MERN stack, providing an intuitive user experience.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Onyirioha Alvin Portfolio</p>
+    </footer>
+
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Thank you for reaching out! I'll get back to you soon.");
+      });
+    </script>
+  </body>
+</html>
